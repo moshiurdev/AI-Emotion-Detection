@@ -41,7 +41,7 @@ flowchart LR
 
 ## Dataset
 
-[FER-2013](https://www.kaggle.com/datasets/msambare/fer2013) (Goodfellow et al., 2013) contains 35,887 grayscale 48×48 face images in 7 classes. This project uses the three original splits:
+[FER-2013](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge) (Goodfellow et al., 2013; ICML 2013 Kaggle challenge) contains 35,887 grayscale 48×48 face images in 7 classes. This project uses the three original splits:
 
 | Split | Used as | Images |
 |---|---|---|
