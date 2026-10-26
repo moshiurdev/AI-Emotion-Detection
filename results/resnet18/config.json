@@ -1,0 +1,25 @@
+{
+  "arch": "resnet18",
+  "input_size": 96,
+  "no_pretrained": false,
+  "epochs": 30,
+  "batch_size": 128,
+  "lr": 0.01,
+  "weight_decay": 0.0005,
+  "warmup_epochs": 2,
+  "dropout": 0.3,
+  "label_smoothing": 0.1,
+  "class_weighting": "sqrt",
+  "seed": 42,
+  "limit": 0,
+  "params": 11180103,
+  "class_weights": [
+    0.8058,
+    2.439,
+    0.7957,
+    0.5996,
+    0.7328,
+    0.9044,
+    0.7228
+  ]
+}

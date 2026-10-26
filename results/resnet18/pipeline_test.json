@@ -1,0 +1,11 @@
+{
+  "checkpoint": "checkpoints/fer_resnet18.pt",
+  "split": "test",
+  "images": 3589,
+  "detected": 3329,
+  "detection_rate": 0.9275564224017833,
+  "acc_dataset_crops_on_detected": 0.706518474016221,
+  "acc_pipeline_by_margin": {
+    "0.9": 0.686091919495344
+  }
+}

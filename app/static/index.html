@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Emotion Recognition</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div>
+        <h1>AI Emotion Recognition</h1>
+        <p class="subtitle">Real-time emotion detection using your webcam</p>
+      </div>
+      <div class="model-badge" id="model-badge">Loading model…</div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel stage-panel">
+      <div class="stage" id="stage">
+        <video id="video" playsinline muted></video>
+        <img id="still" alt="Uploaded image" hidden>
+        <canvas id="overlay"></canvas>
+        <div class="placeholder" id="placeholder">
+          <div class="placeholder-icon" aria-hidden="true">📷</div>
+          <p>Start the camera or upload a photo to begin.</p>
+          <p class="hint">Frames are analysed in memory and never stored.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn primary" id="btn-start">Start Camera</button>
+        <button class="btn accent" id="btn-analyze" disabled>Analyze Emotion</button>
+        <label class="toggle" title="Analyse frames continuously (~4 per second)">
+          <input type="checkbox" id="live" disabled>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          Live mode
+        </label>
+        <button class="btn danger" id="btn-stop" disabled>Stop Camera</button>
+        <button class="btn ghost" id="btn-upload">Upload Image</button>
+        <input type="file" id="file" accept="image/*" hidden>
+      </div>
+      <p class="status" id="status" role="status">Ready.</p>
+    </section>
+
+    <aside class="side">
+      <section class="panel card">
+        <h2>Analysis Results</h2>
+        <div id="results" class="results">
+          <p class="empty">No analysis yet.</p>
+        </div>
+      </section>
+
+      <section class="panel card">
+        <div class="card-head">
+          <h2>Emotion Statistics</h2>
+          <button class="btn small ghost" id="btn-reset">Reset</button>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><span class="stat-value" id="stat-analyses">0</span><span class="stat-label">Total analyses</span></div>
+          <div class="stat"><span class="stat-value" id="stat-faces">0</span><span class="stat-label">Faces analysed</span></div>
+          <div class="stat"><span class="stat-value" id="stat-common">—</span><span class="stat-label">Most common emotion</span></div>
+          <div class="stat"><span class="stat-value" id="stat-conf">—</span><span class="stat-label">Avg. confidence</span></div>
+        </div>
+        <div id="distribution" class="distribution"></div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>ResNet-18 fine-tuned on FER-2013 · YuNet face detector · FastAPI.
+      Predictions describe facial <em>expressions</em>, not what a person actually feels.</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

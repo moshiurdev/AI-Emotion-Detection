@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Dataset (download with scripts/download_data.py)
+data/
+
+# Training runs and weights (see README: "Pretrained weights")
+runs/
+checkpoints/
+*.pt
+*.pth
+*.onnx
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

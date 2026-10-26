@@ -1,0 +1,19 @@
+# Core
+torch>=2.2
+torchvision>=0.17
+numpy>=1.26
+opencv-python>=4.8     # YuNet face detector (cv2.FaceDetectorYN) needs >= 4.8
+Pillow>=10.0
+pyarrow>=14.0          # reading the FER-2013 parquet files
+scikit-learn>=1.3
+matplotlib>=3.8
+certifi                # CA bundle for downloads on python.org macOS builds
+
+# Web demo
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9
+
+# Tests
+pytest>=8.0
+httpx>=0.27
