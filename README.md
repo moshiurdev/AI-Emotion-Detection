@@ -6,8 +6,9 @@ This is a rebuilt, extended version of an earlier course project whose code was 
 
 **Result:** ResNet-18 (ImageNet-pretrained, fine-tuned) reaches **70.5% accuracy and 0.698 macro-F1** on the FER-2013 PrivateTest split. It runs at about 7 ms per face on a laptop CPU.
 
-![Demo screenshot](docs/screenshots/demo.png)
-<!-- Placeholder: add a webcam screenshot at docs/screenshots/demo.png -->
+![Web demo analysing seven faces](docs/screenshots/demo.png)
+
+*The web demo on a test image made from seven FER-2013 PrivateTest faces, one per class (`scripts/make_demo_image.py`). Ground truth, top row left to right: angry, disgust, fear, happy. Bottom row: sad, surprise, neutral. The model gets 5 of 7 right: disgust is predicted as happy and fear as sad.*
 
 ---
 
